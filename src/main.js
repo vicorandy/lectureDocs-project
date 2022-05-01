@@ -1,0 +1,12 @@
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import NavHolder from "./components/ui/NavHolder.vue";
+import BaseButton from "./components/ui/base-button.vue";
+import store from "./store/store.js";
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.component("nav-holder", NavHolder);
+app.component("base-button", BaseButton);
+app.mount("#app");
